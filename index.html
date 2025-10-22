@@ -1,38 +1,53 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nuvobloom</title>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWMR5YGRLV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MWMR5YGRLV');
-  </script>
-
-  <!-- Default favicon -->
-  <link rel="icon" href="dark.ico" id="favicon">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: #000;
-    }
-  </style>
-  <script>
-    // Set favicon based on color scheme
-    function setFavicon() {
-      const favicon = document.getElementById('favicon');
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        favicon.href = 'light.ico';
-      } else {
-        favicon.href = 'dark.ico';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nuvobloom — Coming Soon</title>
+    <link rel="icon" href="dark.ico" id="favicon" />
+    <script>
+      function setFavicon() {
+        const favicon = document.getElementById('favicon');
+        if (!favicon) return;
+        favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'light.ico'
+          : 'dark.ico';
       }
-    }
-    setFavicon();
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
-  </script>
-</head>
+
+      setFavicon();
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', setFavicon);
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #000;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100dvh;
+        color: #f1f1f1;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+      }
+
+      main {
+        text-align: center;
+        font-size: clamp(1.5rem, 5vw, 3rem);
+      }
+    </style>
+  </head>
+  <body>
+    <main>Coming Soon</main>
+  </body>
+</html>
