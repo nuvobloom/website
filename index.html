@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nuvobloom</title>
+    <link rel="icon" href="dark.ico" id="favicon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="styles.css" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function setFavicon() {
+            const favicon = document.getElementById('favicon');
+            if (!favicon) return;
+            favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'light.ico'
+                : 'dark.ico';
+        }
+
+        setFavicon();
+        window
+            .matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', setFavicon);
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html" aria-label="Home" class="logo-link">
+            <img src="nuvobloom.svg" alt="nuvobloom logo" class="logo" width="259" height="37">
+        </a>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="originals.html">Originals</a>
+            <a href="services.html">Services</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="under-construction">
+            <div class="construction-emoji">🚧</div>
+            <h1 class="construction-title">This page is currently under construction</h1>
+            <p class="construction-message">We're working hard to bring you something amazing. Check back soon!</p>
+        </section>
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq-left">
+                    <h2 class="faq-title">Frequently<br>Asked<br>Questions</h2>
+                </div>
+                <div class="faq-right">
+                    <ul class="faq-list">
+                        <li class="faq-item">
+                            <button type="button" class="faq-question">
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="faq-question-text">What types of clients do you work with?</span>
+                            </button>
+                            <div class="faq-answer-wrapper">
+                                <div class="faq-answer">
+                                    <p>We work with startups, established businesses, and everyone in between. If you need a brand that stands out, we're here to help.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button type="button" class="faq-question">
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="faq-question-text">Can we start with a single page or smaller scope?</span>
+                            </button>
+                            <div class="faq-answer-wrapper">
+                                <div class="faq-answer">
+                                    <p>Absolutely. We're flexible and can scale our services to match your needs and budget.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button type="button" class="faq-question">
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="faq-question-text">How fast can you deliver?</span>
+                            </button>
+                            <div class="faq-answer-wrapper">
+                                <div class="faq-answer">
+                                    <p>Timelines vary based on project scope, but we prioritize speed without compromising quality. Let's discuss your deadline.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button type="button" class="faq-question">
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="faq-question-text">Do you handle development too?</span>
+                            </button>
+                            <div class="faq-answer-wrapper">
+                                <div class="faq-answer">
+                                    <p>Unfortunately, we don't offer development… yet. But we're working on adding it soon.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button type="button" class="faq-question">
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="faq-question-text">Do you design for AI-specific products?</span>
+                            </button>
+                            <div class="faq-answer-wrapper">
+                                <div class="faq-answer">
+                                    <p>Yes, we specialize in designing intuitive, cutting-edge interfaces for AI and tech products.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="faq-item">
+                            <button type="button" class="faq-question">
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="faq-question-text">What if I need help after launch?</span>
+                            </button>
+                            <div class="faq-answer-wrapper">
+                                <div class="faq-answer">
+                                    <p>We offer ongoing support and maintenance packages. We're here to help you scale and evolve your brand as you grow.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+            <div class="footer-copyright">© Copyright 2025</div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
