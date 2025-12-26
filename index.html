@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nuvobloom - Creative design agency specializing in brand identity, web design, and UI/UX for modern businesses." />
     <title>nuvobloom</title>
     <link rel="icon" href="dark.ico" id="favicon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <script>
         function setFavicon() {
             const favicon = document.getElementById('favicon');
@@ -23,6 +25,18 @@
         window
             .matchMedia('(prefers-color-scheme: dark)')
             .addEventListener('change', setFavicon);
+
+        // Font Loading Strategy: Detect when fonts are loaded and apply class
+        if ('fonts' in document) {
+            Promise.all([
+                document.fonts.load('400 1em Poppins'),
+                document.fonts.load('700 1em Inter')
+            ]).then(function() {
+                document.documentElement.classList.add('fonts-loaded');
+            });
+        } else {
+            document.documentElement.classList.add('fonts-loaded');
+        }
     </script>
     <link rel="stylesheet" href="styles.css" />
 </head>
