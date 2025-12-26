@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nuvobloom - Creative design agency specializing in brand identity, web design, and UI/UX for modern businesses." />
+    <meta name="description"
+        content="Nuvobloom - Creative design agency specializing in brand identity, web design, and UI/UX for modern businesses." />
     <title>nuvobloom</title>
     <link rel="icon" href="dark.ico" id="favicon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
     <script>
         function setFavicon() {
             const favicon = document.getElementById('favicon');
@@ -31,7 +38,7 @@
             Promise.all([
                 document.fonts.load('400 1em Poppins'),
                 document.fonts.load('700 1em Inter')
-            ]).then(function() {
+            ]).then(function () {
                 document.documentElement.classList.add('fonts-loaded');
             });
         } else {
@@ -76,15 +83,18 @@
                         <li class="faq-item">
                             <button type="button" class="faq-question">
                                 <span class="faq-icon" aria-hidden="true">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
                                 <span class="faq-question-text">What types of clients do you work with?</span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>We work with startups, established businesses, and everyone in between. If you need a brand that stands out, we're here to help.</p>
+                                    <p>We work with startups, established businesses, and everyone in between. If you
+                                        need a brand that stands out, we're here to help.</p>
                                 </div>
                             </div>
                         </li>
@@ -92,15 +102,18 @@
                         <li class="faq-item">
                             <button type="button" class="faq-question">
                                 <span class="faq-icon" aria-hidden="true">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
                                 <span class="faq-question-text">Can we start with a single page or smaller scope?</span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>Absolutely. We're flexible and can scale our services to match your needs and budget.</p>
+                                    <p>Absolutely. We're flexible and can scale our services to match your needs and
+                                        budget.</p>
                                 </div>
                             </div>
                         </li>
@@ -108,15 +121,18 @@
                         <li class="faq-item">
                             <button type="button" class="faq-question">
                                 <span class="faq-icon" aria-hidden="true">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
                                 <span class="faq-question-text">How fast can you deliver?</span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>Timelines vary based on project scope, but we prioritize speed without compromising quality. Let's discuss your deadline.</p>
+                                    <p>Timelines vary based on project scope, but we prioritize speed without
+                                        compromising quality. Let's discuss your deadline.</p>
                                 </div>
                             </div>
                         </li>
@@ -124,47 +140,38 @@
                         <li class="faq-item">
                             <button type="button" class="faq-question">
                                 <span class="faq-icon" aria-hidden="true">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
                                 <span class="faq-question-text">Do you handle development too?</span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>Unfortunately, we don't offer development… yet. But we're working on adding it soon.</p>
+                                    <p>Unfortunately, we don't offer development… yet. But we're working on adding it
+                                        soon.</p>
                                 </div>
                             </div>
                         </li>
 
-                        <li class="faq-item">
-                            <button type="button" class="faq-question">
-                                <span class="faq-icon" aria-hidden="true">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                                <span class="faq-question-text">Do you design for AI-specific products?</span>
-                            </button>
-                            <div class="faq-answer-wrapper">
-                                <div class="faq-answer">
-                                    <p>Yes, we specialize in designing intuitive, cutting-edge interfaces for AI and tech products.</p>
-                                </div>
-                            </div>
-                        </li>
 
                         <li class="faq-item">
                             <button type="button" class="faq-question">
                                 <span class="faq-icon" aria-hidden="true">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
                                 <span class="faq-question-text">What if I need help after launch?</span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>We offer ongoing support and maintenance packages. We're here to help you scale and evolve your brand as you grow.</p>
+                                    <p>We offer ongoing support and maintenance packages. We're here to help you scale
+                                        and evolve your brand as you grow.</p>
                                 </div>
                             </div>
                         </li>
@@ -187,4 +194,5 @@
 
     <script src="main.js" defer></script>
 </body>
+
 </html>

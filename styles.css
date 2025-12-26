@@ -58,8 +58,8 @@ body {
   font-family: var(--font-primary);
 }
 
-.fonts-loaded h1, 
-.fonts-loaded h2, 
+.fonts-loaded h1,
+.fonts-loaded h2,
 .fonts-loaded h3,
 .fonts-loaded .faq-title,
 .fonts-loaded .construction-title {
@@ -498,7 +498,7 @@ main {
   transition-timing-function: ease-out;
 }
 
-.faq-item.active > .faq-answer-wrapper {
+.faq-item.active>.faq-answer-wrapper {
   grid-template-rows: 1fr;
 }
 
@@ -766,8 +766,15 @@ footer {
 }
 
 @keyframes typeScale {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.5); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
 }
 
 /* Layouts Card - 2x1 */
@@ -847,17 +854,32 @@ footer {
   animation: pulse 3s ease-out infinite;
 }
 
-.pulse-ring:nth-child(2) { animation-delay: 0s; }
-.pulse-ring:nth-child(3) { animation-delay: 0.8s; }
-.pulse-ring:nth-child(4) { animation-delay: 1.6s; }
-.pulse-ring:nth-child(5) { animation-delay: 2.4s; }
-.pulse-ring:nth-child(6) { animation-delay: 3.2s; }
+.pulse-ring:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.pulse-ring:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.pulse-ring:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+.pulse-ring:nth-child(5) {
+  animation-delay: 2.4s;
+}
+
+.pulse-ring:nth-child(6) {
+  animation-delay: 3.2s;
+}
 
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(0.5);
     opacity: 1;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(3);
     opacity: 0;
@@ -1025,7 +1047,7 @@ footer {
 }
 
 /* When under construction is in hero position (before FAQ), reduce min-height */
-main > .under-construction:first-child {
+main>.under-construction:first-child {
   min-height: 60vh;
 }
 
