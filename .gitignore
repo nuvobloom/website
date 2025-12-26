@@ -1,0 +1,46 @@
+# Editor directories
+.vscode/
+.cursor/
+.idea/
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build artifacts (if you add build tools later)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Package manager directories (if you add dependencies later)
+node_modules/
+package-lock.json
+yarn.lock
+
