@@ -93,16 +93,19 @@ header {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   height: 100%;
   position: relative;
   z-index: 1;
   grid-column: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -110,10 +113,8 @@ header {
   width: 259px;
   display: block;
   filter: brightness(0) invert(1);
-  vertical-align: middle;
   margin: 0;
   padding: 0;
-  /* Explicit dimensions prevent layout shift (CLS) */
   aspect-ratio: 259 / 37;
   object-fit: contain;
 }
@@ -617,12 +618,16 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-links {
   display: flex;
   gap: 2.5rem;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-links a {
