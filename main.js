@@ -89,11 +89,103 @@
         });
     }
 
+    // --- Bento Grid Animations ---
+    function initBentoGrid() {
+        // Layout Animation
+        const layoutGrid = document.getElementById('layoutGrid');
+        if (layoutGrid) {
+            const layouts = ['layout-cols-2', 'layout-cols-3', 'layout-cols-1'];
+            let currentLayout = 0;
+            
+            // Set initial layout
+            layoutGrid.className = 'layout-grid ' + layouts[currentLayout];
+            
+            setInterval(() => {
+                currentLayout = (currentLayout + 1) % layouts.length;
+                layoutGrid.className = 'layout-grid ' + layouts[currentLayout];
+            }, 2500);
+        }
+
+        // Speed Indicator Animation
+        const speedValue = document.getElementById('speedValue');
+        const speedBar = document.getElementById('speedBar');
+        
+        if (speedValue && speedBar) {
+            // Initial loading state
+            speedValue.style.opacity = '0';
+            speedValue.style.filter = 'blur(5px)';
+            speedValue.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                speedValue.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                speedValue.style.opacity = '1';
+                speedValue.style.filter = 'blur(0px)';
+                speedValue.style.transform = 'translateY(0)';
+                
+                // Trigger bar fill animation
+                setTimeout(() => {
+                    speedBar.classList.add('loaded');
+                }, 100);
+            }, 500);
+        }
+
+        // Security Badge Animation
+        const securityBadge = document.getElementById('securityBadge');
+        if (securityBadge) {
+            const shields = securityBadge.querySelectorAll('.shield');
+            let activeIndex = -1;
+            
+            setInterval(() => {
+                // Reset all shields
+                shields.forEach(shield => shield.classList.remove('active'));
+                
+                // Activate next shield
+                activeIndex = (activeIndex + 1) % shields.length;
+                shields[activeIndex].classList.add('active');
+                
+                // Reset after all are active
+                if (activeIndex === shields.length - 1) {
+                    setTimeout(() => {
+                        shields.forEach(shield => shield.classList.remove('active'));
+                        activeIndex = -1;
+                    }, 800);
+                }
+            }, 800);
+        }
+
+        // Intersection Observer for fade-in animations
+        const bentoCards = document.querySelectorAll('.bento-card');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        bentoCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    }
+
     // Initialize all scripts when DOM is ready
     function init() {
         initMobileMenu();
         initFAQ();
         initCopyrightYear();
+        initBentoGrid();
     }
 
     if (document.readyState === 'loading') {
