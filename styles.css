@@ -189,6 +189,17 @@ main {
     /* Keep logo visible above menu overlay */
   }
 
+  /* Logo link transition for smooth hide/show */
+  .logo-link {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  /* Hide logo when mobile menu is active */
+  .logo-link.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .mobile-menu-btn {
     display: block;
     z-index: 200;
@@ -559,6 +570,10 @@ footer {
   font-size: 0.9rem;
   text-transform: none;
   letter-spacing: normal;
+  white-space: nowrap;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Responsive Footer */

@@ -5,12 +5,14 @@
     function initMobileMenu() {
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const nav = document.querySelector('nav');
+        const logoLink = document.querySelector('.logo-link');
         if (!menuBtn || !nav) return;
 
         const spans = menuBtn.querySelectorAll('span');
 
         function resetMenu() {
             nav.classList.remove('active');
+            if (logoLink) logoLink.classList.remove('hidden');
             spans[0].style.transform = 'none';
             spans[1].style.transform = 'none';
         }
@@ -21,6 +23,7 @@
                 resetMenu();
             } else {
                 nav.classList.add('active');
+                if (logoLink) logoLink.classList.add('hidden');
                 spans[0].style.transform = 'translateY(4.5px) rotate(45deg)';
                 spans[1].style.transform = 'translateY(-4.5px) rotate(-45deg)';
             }
@@ -75,10 +78,22 @@
         });
     }
 
+    // --- Copyright Year Auto-Update ---
+    function initCopyrightYear() {
+        const copyrightElements = document.querySelectorAll('.footer-copyright');
+        const currentYear = new Date().getFullYear();
+        
+        copyrightElements.forEach(element => {
+            // Update the year in the copyright text
+            element.textContent = element.textContent.replace(/\d{4}/, currentYear);
+        });
+    }
+
     // Initialize all scripts when DOM is ready
     function init() {
         initMobileMenu();
         initFAQ();
+        initCopyrightYear();
     }
 
     if (document.readyState === 'loading') {
