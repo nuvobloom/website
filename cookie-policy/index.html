@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Nuvobloom</title>
-    <link rel="icon" href="dark.ico" id="favicon" />
+    <title>Cookie Policy</title>
+    <link rel="icon" href="/dark.ico" id="favicon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="styles.css" as="style">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -17,8 +16,8 @@
             const favicon = document.getElementById('favicon');
             if (!favicon) return;
             favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'light.ico'
-                : 'dark.ico';
+                ? '/light.ico'
+                : '/dark.ico';
         }
 
         setFavicon();
@@ -26,28 +25,34 @@
             .matchMedia('(prefers-color-scheme: dark)')
             .addEventListener('change', setFavicon);
     </script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
     <!-- SECTION: HEADER -->
     <header>
-        <a href="index.html" aria-label="Home" class="logo-link">
-            <img src="nuvobloom.svg" alt="nuvobloom logo" class="logo" width="259" height="37">
+        <a href="/" aria-label="Home" class="logo-link">
+            <img src="/nuvobloom.svg" alt="nuvobloom logo" class="logo" width="259" height="37">
         </a>
         <nav>
-            <a href="about.html">About</a>
-            <a href="originals.html">Originals</a>
-            <a href="services.html">Services</a>
-            <a href="careers.html">Careers</a>
-            <a href="contact.html">Contact</a>
+            <a href="/about">About</a>
+            <a href="/originals">Originals</a>
+            <a href="/services">Services</a>
+            <a href="/careers">Careers</a>
+            <a href="/contact" class="shimmer-btn">
+                <span class="shimmer-spark-container">
+                    <span class="shimmer-spark"></span>
+                </span>
+                <span class="shimmer-text">Contact</span>
+                <span class="shimmer-highlight"></span>
+                <span class="shimmer-backdrop"></span>
+            </a>
         </nav>
         <button class="mobile-menu-btn" aria-label="Menu">
             <span></span>
             <span></span>
         </button>
     </header>
-
     <!-- SECTION: MAIN CONTENT -->
     <main>
         <section class="under-construction">
@@ -56,20 +61,19 @@
             <p class="construction-message">We're working hard to bring you something amazing. Check back soon!</p>
         </section>
     </main>
-
     <!-- SECTION: FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-and-conditions.html">Terms & Conditions</a>
-                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-and-conditions">Terms & Conditions</a>
+                <a href="/cookie-policy">Cookie Policy</a>
             </div>
             <div class="footer-copyright">© Copyright 2025</div>
         </div>
     </footer>
 
-    <script src="main.js" defer></script>
+    <script src="/main.js" defer></script>
 </body>
 
 </html>

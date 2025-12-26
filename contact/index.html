@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms & Conditions</title>
-    <link rel="icon" href="dark.ico" id="favicon" />
+    <title>Contact Us</title>
+    <link rel="icon" href="/dark.ico" id="favicon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,8 +16,8 @@
             const favicon = document.getElementById('favicon');
             if (!favicon) return;
             favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'light.ico'
-                : 'dark.ico';
+                ? '/light.ico'
+                : '/dark.ico';
         }
 
         setFavicon();
@@ -25,21 +25,21 @@
             .matchMedia('(prefers-color-scheme: dark)')
             .addEventListener('change', setFavicon);
     </script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
     <!-- SECTION: HEADER -->
     <header>
-        <a href="index.html" aria-label="Home" class="logo-link">
-            <img src="nuvobloom.svg" alt="nuvobloom logo" class="logo" width="259" height="37">
+        <a href="/" aria-label="Home" class="logo-link">
+            <img src="/nuvobloom.svg" alt="nuvobloom logo" class="logo" width="259" height="37">
         </a>
         <nav>
-            <a href="about.html">About</a>
-            <a href="originals.html">Originals</a>
-            <a href="services.html">Services</a>
-            <a href="careers.html">Careers</a>
-            <a href="contact.html" class="shimmer-btn">
+            <a href="/about">About</a>
+            <a href="/originals">Originals</a>
+            <a href="/services">Services</a>
+            <a href="/careers">Careers</a>
+            <a href="/contact" class="shimmer-btn">
                 <span class="shimmer-spark-container">
                     <span class="shimmer-spark"></span>
                 </span>
@@ -65,15 +65,15 @@
     <footer>
         <div class="footer-container">
             <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-and-conditions.html">Terms & Conditions</a>
-                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-and-conditions">Terms & Conditions</a>
+                <a href="/cookie-policy">Cookie Policy</a>
             </div>
-            <div class="footer-copyright">� Copyright 2025</div>
+            <div class="footer-copyright">© Copyright 2025</div>
         </div>
     </footer>
 
-    <script src="main.js" defer></script>
+    <script src="/main.js" defer></script>
 </body>
 
 </html>
