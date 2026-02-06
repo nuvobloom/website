@@ -18,6 +18,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 img {
@@ -50,7 +51,7 @@ body {
   color: var(--text-color-primary);
   letter-spacing: 0.4rem;
   text-transform: uppercase;
-  padding-top: 5rem;
+  padding-top: 7rem;
   contain: layout style paint;
 }
 
@@ -86,11 +87,11 @@ header {
 }
 
 .header-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 0;
   width: 100%;
@@ -103,14 +104,13 @@ header {
   height: 100%;
   position: relative;
   z-index: 1;
-  grid-column: 1;
   margin: 0;
   padding: 0;
 }
 
 .logo {
   height: 19px;
-  width: 259px;
+  width: auto;
   display: block;
   filter: brightness(0) invert(1);
   margin: 0;
@@ -129,10 +129,8 @@ nav {
   flex-wrap: nowrap;
   min-width: 0;
   overflow: visible;
-  width: 100%;
   position: relative;
   z-index: 1;
-  grid-column: 2;
 }
 
 
@@ -203,6 +201,10 @@ main {
 @media screen and (max-width: 768px) {
   header {
     padding: 1rem 1.5rem;
+  }
+
+  body {
+    padding-top: 5rem;
   }
 
   .header-container {
@@ -1061,12 +1063,13 @@ footer {
 /* SECTION: UNDER CONSTRUCTION */
 .under-construction {
   width: 100%;
-  min-height: calc(100vh - 10rem);
+  flex: 1;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center !important;
   justify-content: center !important;
-  padding: 6rem 3rem;
+  padding: 2rem 3rem;
   text-align: center;
   margin: 0 auto;
   box-sizing: border-box;
@@ -1077,7 +1080,8 @@ footer {
 }
 
 /* When under construction is in hero position (before FAQ), reduce min-height */
-main>.under-construction:first-child {
+main>.under-construction:first-child:not(:last-child) {
+  flex: none;
   min-height: 60vh;
 }
 
