@@ -40,7 +40,7 @@
         }, { passive: true });
 
         nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 if (nav.classList.contains('active')) {
                     resetMenu();
                 }
@@ -54,11 +54,11 @@
 
         function handleFAQClick(clickedItem, allItems) {
             const isCurrentlyActive = clickedItem.classList.contains('active');
-            
+
             allItems.forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             if (!isCurrentlyActive) {
                 clickedItem.classList.add('active');
             }
@@ -68,7 +68,7 @@
             const questionButton = item.querySelector('.faq-question');
             if (!questionButton) return;
 
-            questionButton.addEventListener('click', function(event) {
+            questionButton.addEventListener('click', function (event) {
                 event.preventDefault();
                 handleFAQClick(item, faqItems);
             });
@@ -78,7 +78,7 @@
     function initCopyrightYear() {
         const copyrightElements = document.querySelectorAll('.footer-copyright');
         const currentYear = new Date().getFullYear();
-        
+
         copyrightElements.forEach(element => {
             element.textContent = element.textContent.replace(/\d{4}/, currentYear);
         });
@@ -88,6 +88,23 @@
         initMobileMenu();
         initFAQ();
         initCopyrightYear();
+        initScrollEffect();
+    }
+
+    function initScrollEffect() {
+        const nav = document.querySelector('nav');
+        const logo = document.querySelector('.logo-link');
+        if (!nav || !logo) return;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scroll-hidden');
+                logo.classList.add('scroll-hidden');
+            } else {
+                nav.classList.remove('scroll-hidden');
+                logo.classList.remove('scroll-hidden');
+            }
+        }, { passive: true });
     }
 
     if (document.readyState === 'loading') {
