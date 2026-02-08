@@ -88,6 +88,7 @@
         initFAQ();
         initCopyrightYear();
         initScrollEffect();
+        initImageCompression();
         // initRevealAnimations();
     }
 
@@ -106,6 +107,33 @@
 
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
+        });
+    }
+
+    function initImageCompression() {
+        const images = document.querySelectorAll(".compress");
+
+        images.forEach(img => {
+            // Only compress if not already compressed (check data attribute)
+            if (img.dataset.compressed) return;
+
+            const tempImg = new Image();
+            tempImg.src = img.src;
+
+            tempImg.onload = () => {
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext("2d");
+
+                // Resize image to 50% of original size
+                canvas.width = tempImg.width / 2;
+                canvas.height = tempImg.height / 2;
+
+                ctx.drawImage(tempImg, 0, 0, canvas.width, canvas.height);
+
+                // Export as WebP to preserve transparency (0.8 = 80% quality)
+                img.src = canvas.toDataURL("image/webp", 0.8);
+                img.dataset.compressed = "true";
+            };
         });
     }
 
