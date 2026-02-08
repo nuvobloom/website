@@ -89,6 +89,7 @@
         initCopyrightYear();
         initScrollEffect();
         initImageCompression();
+        initPreloader();
         // initRevealAnimations();
     }
 
@@ -134,6 +135,48 @@
                 img.src = canvas.toDataURL("image/webp", 0.8);
                 img.dataset.compressed = "true";
             };
+        });
+    }
+
+    function initPreloader() {
+        const preloader = document.getElementById('preloader');
+        if (!preloader) return;
+
+        // Prevent scrolling during load
+        document.body.style.overflow = 'hidden';
+
+        window.addEventListener('load', () => {
+            // Optional: minimal delay to ensure smooth transition if load is too fast
+            setTimeout(() => {
+                preloader.classList.add('loaded'); // Fades out the preloader
+                document.body.style.overflow = ''; // Restore scrolling
+
+                // Trigger entrance animations for other elements if desired
+                // For example, fade in the nav similar to how it appears
+                const nav = document.querySelector('nav');
+                // The nav has its own logic, but we can animate the header/logo in
+                const header = document.querySelector('header');
+                if (header) {
+                    header.style.opacity = '0';
+                    header.style.transition = 'opacity 1s ease 0.5s';
+                    requestAnimationFrame(() => {
+                        header.style.opacity = '1';
+                    });
+                }
+
+                // Also animate the hero content
+                const hero = document.querySelector('.hero-container');
+                if (hero) {
+                    hero.style.opacity = '0';
+                    hero.style.transform = 'translateY(20px)';
+                    hero.style.transition = 'opacity 1s ease 0.3s, transform 1s ease 0.3s';
+                    requestAnimationFrame(() => {
+                        hero.style.opacity = '1';
+                        hero.style.transform = 'translateY(0)';
+                    });
+                }
+
+            }, 500); // 500ms minimum duration for branding visibility
         });
     }
 
