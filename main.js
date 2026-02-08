@@ -144,12 +144,14 @@
 
         // Prevent scrolling during load
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
 
         window.addEventListener('load', () => {
             // Optional: minimal delay to ensure smooth transition if load is too fast
             setTimeout(() => {
                 preloader.classList.add('loaded'); // Fades out the preloader
                 document.body.style.overflow = ''; // Restore scrolling
+                document.documentElement.style.overflow = '';
 
                 // Trigger entrance animations for other elements if desired
                 // For example, fade in the nav similar to how it appears

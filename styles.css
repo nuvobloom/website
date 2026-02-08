@@ -61,14 +61,15 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100dvh;
   background-color: var(--bg-color-main);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+  overscroll-behavior: none;
 }
 
 #preloader.loaded {
@@ -90,6 +91,11 @@ body {
   height: auto;
   filter: brightness(0) invert(1);
   animation: preloaderPulse 2s infinite ease-in-out;
+  /* Reset global img styles that might break centering */
+  content-visibility: visible;
+  contain-intrinsic-size: auto;
+  margin: 0;
+  display: block;
 }
 
 @keyframes preloaderPulse {
