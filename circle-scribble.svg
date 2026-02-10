@@ -1,0 +1,13 @@
+<svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 45,125 C 45,75 75,42 125,40 C 175,38 208,68 210,118 C 212,168 182,205 132,208 C 82,211 48,178 46,128" 
+    stroke="#FFFFFF" 
+    stroke-width="3" 
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.9"
+    style="
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    "
+  />
+</svg>

@@ -183,20 +183,29 @@
     }
 
     function initScrollEffect() {
-        const nav = document.querySelector('nav');
-        const logo = document.querySelector('.logo-link');
-        if (!nav || !logo) return;
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('scroll-hidden');
-                logo.classList.add('scroll-hidden');
-            } else {
-                nav.classList.remove('scroll-hidden');
-                logo.classList.remove('scroll-hidden');
-            }
-        }, { passive: true });
+        // Logo scroll effect removed - logo now stays visible on whole page
+        // Keeping function for potential future scroll effects
     }
+
+    // Force scroll to top on page refresh/load
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    // Always scroll to top on page load/refresh
+    window.scrollTo(0, 0);
+
+    // Show preloader on page navigation (clicking internal links)
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin) && !link.href.includes('#')) {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.remove('loaded');
+                preloader.style.display = 'flex';
+            }
+        }
+    });
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);

@@ -21,11 +21,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Inter:wght@400;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Inter:wght@400;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
             rel="stylesheet">
     </noscript>
     <script>
@@ -46,8 +46,7 @@
         if ('fonts' in document) {
             Promise.all([
                 document.fonts.load('400 1em Poppins'),
-                document.fonts.load('900 1em Inter'),
-                document.fonts.load('400 1em Lora')
+                document.fonts.load('900 1em Inter')
             ]).then(function () {
                 document.documentElement.classList.add('fonts-loaded');
             });
@@ -94,7 +93,10 @@
                 <h1 class="hero-headline">Your Brand Should Work<br>As Hard As You Do</h1>
                 <p class="hero-subheadline">Stop blending in. We create strategic brand identities that get you noticed,
                     remembered, and chosen.</p>
-                <a href="https://cal.com/nuvobloom/discoverycall" class="hero-cta">Start your project</a>
+                <div class="cta-wrapper">
+                    <a href="https://cal.com/nuvobloom/discoverycall" class="hero-cta">Book a discovery call</a>
+                    <img src="arrow.png" alt="" class="cta-arrow">
+                </div>
             </div>
         </section>
 
@@ -105,30 +107,30 @@
                 <div class="why-choose-grid">
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
-                            <img src="trophy.png" alt="Trophy illustration" class="why-choose-card-img compress"
-                                loading="lazy">
+                            <img src="crown-trophy.png" alt="Crown trophy illustration"
+                                class="why-choose-card-img crown-trophy compress" loading="lazy">
                         </div>
                         <h3 class="why-choose-card-title">Design is the Closer</h3>
                         <p class="why-choose-card-text">Your product might be fire, but if your competitor looks better,
-                            they get the sale. Customers equate "finer design" with "better quality." Period.</p>
+                            they get the sale. Better design signals better quality, every time.</p>
                     </div>
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
-                            <img src="diy.png" alt="DIY illustration" class="why-choose-card-img compress"
-                                loading="lazy" style="height: 220px;">
+                            <img src="trust-gap.png" alt="Trust Gap illustration"
+                                class="why-choose-card-img trust-gap-img compress" loading="lazy">
                         </div>
-                        <h3 class="why-choose-card-title">You Look DIY</h3>
-                        <p class="why-choose-card-text">You've outgrown "good enough." If your brand looks amateur,
-                            high-ticket clients won't trust you with their money. You're scaring away the big fish.</p>
+                        <h3 class="why-choose-card-title">The Trust Gap</h3>
+                        <p class="why-choose-card-text">Your expertise is solid, but if your brand looks amateur,
+                            high-ticket clients won't give you a shot.</p>
                     </div>
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
-                            <img src="perception.png" alt="Perception Tax illustration"
-                                class="why-choose-card-img compress" loading="lazy">
+                            <img src="visual-penalty.png" alt="Visual Penalty illustration"
+                                class="why-choose-card-img visual-penalty-img compress" loading="lazy">
                         </div>
-                        <h3 class="why-choose-card-title">The Perception Tax</h3>
+                        <h3 class="why-choose-card-title">Visual Penalty</h3>
                         <p class="why-choose-card-text">You can't charge premium prices with budget visuals. Weak design
-                            forces you to compete on price, which is a race to the bottom.</p>
+                            forces you to drop your prices just to compete.</p>
                     </div>
                 </div>
             </div>
@@ -137,7 +139,7 @@
         <section class="faq-section">
             <div class="faq-container">
                 <div class="faq-left">
-                    <h2 class="faq-title">Frequently<br>Asked<br>Questions</h2>
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
                 </div>
                 <div class="faq-right">
                     <ul class="faq-list">
@@ -237,6 +239,20 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary CTA Section -->
+        <section class="secondary-cta-section">
+            <div class="secondary-cta-container">
+                <h2 class="secondary-cta-headline">Ready to Stand Out?</h2>
+                <p class="secondary-cta-subheadline">Your brand deserves to be seen. Let's build something extraordinary
+                    together.</p>
+                <div class="secondary-cta-wrapper">
+                    <a href="https://cal.com/nuvobloom/discoverycall" class="secondary-cta-btn">Book a discovery
+                        call</a>
+                    <img src="click-here-arrow.png" alt="" class="click-here-arrow">
                 </div>
             </div>
         </section>
