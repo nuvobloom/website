@@ -30,8 +30,8 @@ img::selection {
 }
 
 img {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 400px;
+  max-width: 100%;
+  display: block;
 }
 
 html {

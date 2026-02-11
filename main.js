@@ -88,7 +88,7 @@
         initFAQ();
         initCopyrightYear();
         initScrollEffect();
-        initImageCompression();
+        // initImageCompression();
         initPreloader();
         // initRevealAnimations();
     }
@@ -146,7 +146,7 @@
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
 
-        window.addEventListener('load', () => {
+        const hidePreloader = () => {
             // Optional: minimal delay to ensure smooth transition if load is too fast
             setTimeout(() => {
                 preloader.classList.add('loaded'); // Fades out the preloader
@@ -179,7 +179,13 @@
                 }
 
             }, 500); // 500ms minimum duration for branding visibility
-        });
+        };
+
+        if (document.readyState === 'complete') {
+            hidePreloader();
+        } else {
+            window.addEventListener('load', hidePreloader);
+        }
     }
 
     function initScrollEffect() {
