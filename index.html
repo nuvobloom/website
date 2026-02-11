@@ -16,7 +16,7 @@
     <meta name="description"
         content="nuvobloom - Creative design agency specializing in brand identity, web design, and UI/UX for modern businesses." />
     <title>nuvobloom</title>
-    <link rel="icon" href="dark.ico" id="favicon" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
@@ -28,20 +28,8 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
             rel="stylesheet">
     </noscript>
+
     <script>
-        function setFavicon() {
-            const favicon = document.getElementById('favicon');
-            if (!favicon) return;
-            favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'light.ico'
-                : 'dark.ico';
-        }
-
-        setFavicon();
-        window
-            .matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', setFavicon);
-
         // Font Loading Strategy: Detect when fonts are loaded and apply class
         if ('fonts' in document) {
             Promise.all([
@@ -95,7 +83,7 @@
                     remembered, and chosen.</p>
                 <div class="cta-wrapper">
                     <a href="https://cal.com/nuvobloom/discoverycall" class="hero-cta">Book a discovery call</a>
-                    <img src="arrow.png" alt="" class="cta-arrow">
+                    <img src="arrow.png" alt="" class="cta-arrow" width="1024" height="1024">
                 </div>
             </div>
         </section>
@@ -108,7 +96,8 @@
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
                             <img src="crown-trophy.png" alt="Crown trophy illustration"
-                                class="why-choose-card-img crown-trophy compress" loading="lazy">
+                                class="why-choose-card-img crown-trophy compress" loading="lazy" width="1280"
+                                height="1280">
                         </div>
                         <h3 class="why-choose-card-title">Design is the Closer</h3>
                         <p class="why-choose-card-text">Your product might be fire, but if your competitor looks better,
@@ -117,7 +106,8 @@
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
                             <img src="trust-gap.png" alt="Trust Gap illustration"
-                                class="why-choose-card-img trust-gap-img compress" loading="lazy">
+                                class="why-choose-card-img trust-gap-img compress" loading="lazy" width="1280"
+                                height="1280">
                         </div>
                         <h3 class="why-choose-card-title">The Trust Gap</h3>
                         <p class="why-choose-card-text">Your expertise is solid, but if your brand looks amateur,
@@ -126,7 +116,8 @@
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
                             <img src="visual-penalty.png" alt="Visual Penalty illustration"
-                                class="why-choose-card-img visual-penalty-img compress" loading="lazy">
+                                class="why-choose-card-img visual-penalty-img compress" loading="lazy" width="1280"
+                                height="1280">
                         </div>
                         <h3 class="why-choose-card-title">Visual Penalty</h3>
                         <p class="why-choose-card-text">You can't charge premium prices with budget visuals. Weak design
@@ -252,7 +243,7 @@
                 <div class="secondary-cta-wrapper">
                     <a href="https://cal.com/nuvobloom/discoverycall" class="secondary-cta-btn">Book a discovery
                         call</a>
-                    <img src="click-here-arrow.png" alt="" class="click-here-arrow">
+                    <img src="click-here-arrow.png" alt="" class="click-here-arrow" width="1280" height="999">
                 </div>
             </div>
         </section>
@@ -268,9 +259,9 @@
                 <a href="/cookie-policy">Cookie Policy</a>
             </div>
             <div class="footer-socials">
-                <a href="https://x.com/nuvobloom" target="_blank">X (Twitter)</a>
-                <a href="https://linkedin.com/company/nuvobloom" target="_blank">LinkedIn</a>
+                <a href="https://www.behance.net/nuvobloom" target="_blank">Behance</a>
                 <a href="https://instagram.com/nuvobloom" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/company/nuvobloom" target="_blank">LinkedIn</a>
             </div>
         </div>
     </footer>

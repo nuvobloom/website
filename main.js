@@ -87,56 +87,11 @@
         initMobileMenu();
         initFAQ();
         initCopyrightYear();
-        initScrollEffect();
-        // initImageCompression();
         initPreloader();
-        // initRevealAnimations();
     }
 
-    function initRevealAnimations() {
-        const observerOptions = {
-            threshold: 0.1
-        };
+    // initRevealAnimations removed
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    }
-
-    function initImageCompression() {
-        const images = document.querySelectorAll(".compress");
-
-        images.forEach(img => {
-            // Only compress if not already compressed (check data attribute)
-            if (img.dataset.compressed) return;
-
-            const tempImg = new Image();
-            tempImg.src = img.src;
-
-            tempImg.onload = () => {
-                const canvas = document.createElement("canvas");
-                const ctx = canvas.getContext("2d");
-
-                // Resize image to 50% of original size
-                canvas.width = tempImg.width / 2;
-                canvas.height = tempImg.height / 2;
-
-                ctx.drawImage(tempImg, 0, 0, canvas.width, canvas.height);
-
-                // Export as WebP to preserve transparency (0.8 = 80% quality)
-                img.src = canvas.toDataURL("image/webp", 0.8);
-                img.dataset.compressed = "true";
-            };
-        });
-    }
 
     function initPreloader() {
         const preloader = document.getElementById('preloader');
@@ -188,10 +143,7 @@
         }
     }
 
-    function initScrollEffect() {
-        // Logo scroll effect removed - logo now stays visible on whole page
-        // Keeping function for potential future scroll effects
-    }
+    // initScrollEffect removed
 
     // Force scroll to top on page refresh/load
     if ('scrollRestoration' in history) {
