@@ -38,6 +38,7 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
   background: #000;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -751,12 +752,13 @@ main {
     width: 100%;
     justify-content: center;
   }
+
+  .click-here-arrow {
+    display: none;
+  }
 }
 
-/* SECTION: OUR PROCESS */
-.process-section {
-  background: var(--bg-color-main);
-}
+
 
 /* SECTION: FAQ */
 .faq-section {
@@ -1079,335 +1081,7 @@ footer {
   }
 }
 
-/* SECTION: FEATURES / BENTO GRID */
-.features-section {
-  width: 100%;
-  background: #0a0a0a;
-  padding: 6rem 3rem;
-  min-height: auto;
-}
 
-.features-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.features-label {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 2rem;
-  font-family: var(--font-primary);
-}
-
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
-  grid-auto-rows: 200px;
-  grid-auto-flow: row dense;
-}
-
-.bento-card {
-  background: #18181b;
-  border: 1px solid #27272a;
-  border-radius: 0.75rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.bento-card:hover {
-  border-color: #3f3f46;
-}
-
-.bento-typography:hover,
-.bento-global:hover {
-  transform: scale(1.02);
-}
-
-.bento-layouts:hover,
-.bento-speed:hover,
-.bento-security:hover,
-.bento-mobile:hover {
-  transform: scale(0.98);
-}
-
-.bento-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.bento-text {
-  margin-top: auto;
-}
-
-.bento-title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  color: #fff;
-  font-weight: 500;
-  margin: 0 0 0.25rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.bento-description {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.875rem;
-  margin: 0;
-  line-height: 1.5;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.icon-inline {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
-
-/* Typography Card - 2x2 */
-.bento-typography {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
-}
-
-.type-tester {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.type-letter {
-  font-family: var(--font-display);
-  font-size: 6rem;
-  color: #fff;
-  font-weight: 500;
-  display: inline-block;
-}
-
-/* Layouts Card - 2x1 */
-.bento-layouts {
-  grid-column: 3 / 5;
-  grid-row: 1;
-}
-
-.layout-animation {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.layout-grid {
-  display: grid;
-  gap: 0.375rem;
-  width: 100%;
-  max-width: 140px;
-  height: 100%;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.layout-grid.layout-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.layout-grid.layout-cols-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.layout-grid.layout-cols-1 {
-  grid-template-columns: 1fr;
-}
-
-.layout-item {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 0.375rem;
-  height: 20px;
-  width: 100%;
-}
-
-/* Global Network Card - 2x2 */
-.bento-global {
-  grid-column: 5 / 7;
-  grid-row: 1 / 3;
-}
-
-.global-network {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.globe-icon {
-  width: 64px;
-  height: 64px;
-  color: rgba(255, 255, 255, 0.8);
-  position: relative;
-  z-index: 10;
-}
-
-.pulse-ring {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-}
-
-/* Speed Card - 2x1 */
-.bento-speed {
-  grid-column: 3 / 5;
-  grid-row: 2;
-}
-
-.speed-indicator {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.speed-value {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #fff;
-  font-family: var(--font-primary);
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.speed-label {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.speed-bar {
-  width: 100%;
-  max-width: 120px;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 9999px;
-  overflow: hidden;
-}
-
-.speed-bar-fill {
-  height: 100%;
-  background: #fff;
-  border-radius: 9999px;
-  width: 0;
-}
-
-.speed-bar-fill.loaded {
-  width: 100%;
-}
-
-/* Security Card - 3x1 */
-.bento-security {
-  grid-column: 1 / 4;
-  grid-row: 3;
-}
-
-.security-badge {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.shield {
-  width: 48px;
-  height: 48px;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.shield.active {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-.shield svg {
-  width: 20px;
-  height: 20px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.shield.active svg {
-  color: #fff;
-}
-
-/* Mobile Card - 3x1 */
-.bento-mobile {
-  grid-column: 4 / 7;
-  grid-row: 3;
-}
-
-.mobile-icon {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobile-icon svg {
-  width: 64px;
-  height: 64px;
-  color: #fff;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .features-section {
-    padding: 4rem 1.5rem;
-  }
-
-  .bento-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 250px;
-  }
-
-  .bento-typography,
-  .bento-global,
-  .bento-layouts,
-  .bento-speed,
-  .bento-security,
-  .bento-mobile {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-
-  .type-letter {
-    font-size: 4rem;
-  }
-}
 
 /* SECTION: UNDER CONSTRUCTION */
 .under-construction {
@@ -1491,17 +1165,7 @@ footer {
   gap: 2rem;
 }
 
-/* Base style for all sections to support reveal animations - removed for now */
-/* section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-} */
 
 .hero-headline {
   font-family: var(--font-display);
@@ -1596,6 +1260,93 @@ section.visible {
   .hero-cta {
     padding: 0.875rem 2rem;
     font-size: 0.95rem;
+    width: 100%;
+    /* Full width on mobile for better touch target */
+    max-width: 300px;
+  }
+
+  .cta-arrow {
+    display: none;
+    /* Hide decorative arrow on mobile to prevent overflow/layout issues */
+  }
+}
+
+/* Enhancements for Foldable, Trifold, and Small Devices */
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
+
+  .header-container,
+  .hero-container,
+  .why-choose-container,
+  .secondary-cta-container,
+  .footer-container,
+  .features-container,
+  .under-construction {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Tighter headings for small screens */
+  .hero-headline {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+  }
+
+  .why-choose-headline {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+  }
+
+  .secondary-cta-headline {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  /* Adjust construction emoji size */
+  .construction-emoji {
+    font-size: 3rem;
+  }
+
+  /* Ensure logo fits */
+  .logo {
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  /* Ultra-small / Folded View adjustments */
+  header {
+    padding: 0.75rem 1rem;
+  }
+
+  .hero-section {
+    padding: 3rem 1rem;
+    min-height: 60vh;
+  }
+
+  .hero-headline {
+    font-size: 1.75rem;
+    /* Fallback for very narrow screens */
+  }
+
+  .hero-subheadline {
+    font-size: 0.9rem;
+  }
+
+  .why-choose-card {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Ensure images shrink properly */
+  .why-choose-card-img {
+    height: auto;
+    max-height: 180px;
+  }
+
+  .footer-socials {
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }
 
