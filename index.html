@@ -2,22 +2,24 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>nuvobloom | Brand Identity Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDY6638LL7"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-XDY6638LL7');
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <title>nuvobloom | Brand Identity Studio</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -29,7 +31,7 @@
     </noscript>
 
     <script>
-        // Font Loading Strategy: Detect when fonts are loaded and apply class
+        // Font loading strategy: add a class when fonts are ready
         if ('fonts' in document) {
             Promise.all([
                 document.fonts.load('400 1em Poppins'),
@@ -41,7 +43,8 @@
             document.documentElement.classList.add('fonts-loaded');
         }
     </script>
-    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -51,11 +54,13 @@
             <img src="nuvobloom.svg" alt="Loading..." class="preloader-logo" width="259" height="37">
         </div>
     </div>
+
     <header>
         <div class="header-container">
             <a href="/" aria-label="Home" class="logo-link">
                 <img src="nuvobloom.svg" alt="nuvobloom logo" class="logo" width="259" height="37">
             </a>
+
             <nav>
                 <a href="/" aria-label="Home" class="nav-logo">
                     <img src="nuvobloom.svg" alt="nuvobloom" class="nav-logo-img" width="259" height="37">
@@ -66,6 +71,7 @@
                 <a href="/careers">Careers</a>
                 <a href="/contact">Contact</a>
             </nav>
+
             <button class="mobile-menu-btn" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -73,15 +79,16 @@
         </div>
     </header>
 
-
     <main>
         <section class="hero-section">
             <div class="hero-container">
-                <h1 class="hero-headline">Your Brand Should Work<br>As Hard As You Do</h1>
-                <p class="hero-subheadline">Stop blending in. We create strategic brand identities that get you noticed,
-                    remembered, and chosen.</p>
-                <div class="cta-wrapper">
-                    <a href="https://cal.com/nuvobloom/discoverycall" class="hero-cta">Book a discovery call</a>
+                <h1 class="hero-headline cinematic-reveal">Your Brand Should Work<br>As Hard As You Do</h1>
+                <p class="hero-subheadline cinematic-reveal">Stop blending in. We create strategic brand identities that
+                    get you
+                    noticed, remembered, and chosen.</p>
+
+                <div class="cta-wrapper cinematic-reveal">
+                    <a href="/message" class="hero-cta">Book a discovery call</a>
                     <img src="arrow.png" alt="" class="cta-arrow" width="1024" height="1024">
                 </div>
             </div>
@@ -91,6 +98,7 @@
         <section class="why-choose-section">
             <div class="why-choose-container">
                 <h2 class="why-choose-headline">Weak Design = Weak Business</h2>
+
                 <div class="why-choose-grid">
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
@@ -99,9 +107,10 @@
                                 height="1280">
                         </div>
                         <h3 class="why-choose-card-title">Design is the Closer</h3>
-                        <p class="why-choose-card-text">Your product might be fire, but if your competitor looks better,
-                            they get the sale. Better design signals better quality, every time.</p>
+                        <p class="why-choose-card-text">Your product might be fire, but if your competitor looks
+                            better, they get the sale. Better design signals better quality, every time.</p>
                     </div>
+
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
                             <img src="trust-gap.png" alt="Trust Gap illustration"
@@ -112,6 +121,7 @@
                         <p class="why-choose-card-text">Your expertise is solid, but if your brand looks amateur,
                             high-ticket clients won't give you a shot.</p>
                     </div>
+
                     <div class="why-choose-card">
                         <div class="why-choose-card-illustration">
                             <img src="visual-penalty.png" alt="Visual Penalty illustration"
@@ -119,18 +129,21 @@
                                 height="1280">
                         </div>
                         <h3 class="why-choose-card-title">Visual Penalty</h3>
-                        <p class="why-choose-card-text">You can't charge premium prices with budget visuals. Weak design
-                            forces you to drop your prices just to compete.</p>
+                        <p class="why-choose-card-text">You can't charge premium prices with budget visuals. Weak
+                            design forces you to drop your prices just to compete.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+
 
         <section class="faq-section">
             <div class="faq-container">
                 <div class="faq-left">
                     <h2 class="faq-title">Frequently Asked Questions</h2>
                 </div>
+
                 <div class="faq-right">
                     <ul class="faq-list">
                         <li class="faq-item">
@@ -144,10 +157,11 @@
                                 </span>
                                 <span class="faq-question-text">What types of clients do you work with?</span>
                             </button>
+
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>We work with startups, established businesses, and everyone in between. If you
-                                        need a brand that stands out, we're here to help.</p>
+                                    <p>We work with startups, established businesses, and everyone in between. If
+                                        you need a brand that stands out, we're here to help.</p>
                                 </div>
                             </div>
                         </li>
@@ -161,12 +175,15 @@
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                                <span class="faq-question-text">Can we start with a single page or smaller scope?</span>
+                                <span class="faq-question-text">Can we start with a single project or optional
+                                    service?</span>
                             </button>
+
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>Absolutely. We're flexible and can scale our services to match your needs and
-                                        budget.</p>
+                                    <p>Absolutely. We're very flexible, especially for new startups. Whether you need
+                                        standalone consulting, a brand refresh, or a specific service, we can tailor our
+                                        approach to fit your needs.</p>
                                 </div>
                             </div>
                         </li>
@@ -182,6 +199,7 @@
                                 </span>
                                 <span class="faq-question-text">How fast can you deliver?</span>
                             </button>
+
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
                                     <p>Timelines vary based on project scope, but we prioritize speed without
@@ -201,6 +219,7 @@
                                 </span>
                                 <span class="faq-question-text">Do you handle development too?</span>
                             </button>
+
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
                                     <p>Unfortunately, we don't offer development… yet. But we're working on adding it
@@ -208,7 +227,6 @@
                                 </div>
                             </div>
                         </li>
-
 
                         <li class="faq-item">
                             <button type="button" class="faq-question">
@@ -221,10 +239,11 @@
                                 </span>
                                 <span class="faq-question-text">What if I need help after launch?</span>
                             </button>
+
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
-                                    <p>We offer ongoing support and maintenance packages. We're here to help you scale
-                                        and evolve your brand as you grow.</p>
+                                    <p>We offer ongoing support and maintenance packages. We're here to help you
+                                        scale and evolve your brand as you grow.</p>
                                 </div>
                             </div>
                         </li>
@@ -237,26 +256,28 @@
         <section class="secondary-cta-section">
             <div class="secondary-cta-container">
                 <h2 class="secondary-cta-headline">Ready to Stand Out?</h2>
-                <p class="secondary-cta-subheadline">Your brand deserves to be seen. Let's build something extraordinary
-                    together.</p>
+                <p class="secondary-cta-subheadline">Your brand deserves to be seen. Let's build something
+                    extraordinary together.</p>
+
                 <div class="secondary-cta-wrapper">
-                    <a href="https://cal.com/nuvobloom/discoverycall" class="secondary-cta-btn">Book a discovery
+                    <a href="/message" class="secondary-cta-btn">Book a discovery
                         call</a>
                     <img src="click-here-arrow.png" alt="" class="click-here-arrow" width="1280" height="999">
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-copyright">&copy; Copyright 2025</div>
+            <div class="footer-copyright">&copy; Copyright 2026</div>
+
             <div class="footer-links">
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms & Conditions</a>
                 <a href="/cookie-policy">Cookie Policy</a>
             </div>
+
             <div class="footer-socials">
                 <a href="https://www.behance.net/nuvobloom" target="_blank">Behance</a>
                 <a href="https://instagram.com/nuvobloom" target="_blank">Instagram</a>

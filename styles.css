@@ -87,6 +87,12 @@ body {
   visibility: hidden;
 }
 
+#preloader.loaded .preloader-logo {
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .preloader-content {
   position: relative;
   width: 100%;
@@ -1732,4 +1738,151 @@ footer {
     width: auto;
     max-width: none;
   }
+}
+
+/* SECTION: MESSAGE FROM AMINE PAGE */
+.message-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 500;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+/* Reduce gap for message page */
+body:has(.message-content) .hero-section {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.message-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.message-content p {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.message-content p:first-child {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 500;
+  margin-bottom: 3rem;
+  color: var(--text-color-white);
+}
+
+.message-signature {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  color: var(--text-color-white);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+}
+
+@media screen and (max-width: 768px) {
+  .message-headline {
+    margin-bottom: 2rem;
+  }
+
+  .message-content {
+    text-align: center;
+  }
+
+  .message-content p {
+    font-size: clamp(1rem, 4vw, 1.15rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .message-content p:first-child {
+    font-size: clamp(1.1rem, 4.5vw, 1.25rem);
+    margin-bottom: 2rem;
+  }
+
+  .message-signature {
+    margin-top: 3rem;
+  }
+}
+
+.signature-contact {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  text-align: center;
+}
+
+.signature-contact {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  text-align: center;
+}
+
+.signature-contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Cinematic Scroll Animations */
+.cinematic-reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  filter: blur(10px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.cinematic-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Stagger delays for grid items if needed, but JS observer is better for individual trigger */
+
+
+.calendar-alternative {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--text-color-white);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.calendar-alternative a {
+  color: var(--text-color-white);
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.calendar-alternative a:hover {
+  opacity: 0.7;
 }

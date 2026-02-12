@@ -93,6 +93,70 @@
     // initRevealAnimations removed
 
 
+    function initScrollAnimations() {
+        // Elements to animate
+        const animatedElements = [
+            ...document.querySelectorAll('.hero-headline'),
+            ...document.querySelectorAll('.hero-subheadline'),
+            ...document.querySelectorAll('.cta-wrapper'),
+            ...document.querySelectorAll('.why-choose-card'),
+            ...document.querySelectorAll('.why-choose-headline'),
+            ...document.querySelectorAll('.faq-title'),
+            ...document.querySelectorAll('.faq-item'),
+            ...document.querySelectorAll('.secondary-cta-headline'),
+            ...document.querySelectorAll('.secondary-cta-subheadline'),
+            ...document.querySelectorAll('.secondary-cta-wrapper')
+        ];
+
+        if (animatedElements.length === 0) return;
+
+        const observerOptions = {
+            threshold: 0.1, // Trigger when 10% visible
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+
+                    // Determine delay based on element type or position
+                    let delay = 0;
+
+                    if (el.classList.contains('why-choose-card')) {
+                        // Find index among cards for staggering
+                        const cards = Array.from(document.querySelectorAll('.why-choose-card'));
+                        const index = cards.indexOf(el);
+                        delay = (index % 3) * 150;
+                    } else if (el.classList.contains('faq-item')) {
+                        // Find index among faq items for staggering
+                        const faqs = Array.from(document.querySelectorAll('.faq-item'));
+                        const index = faqs.indexOf(el);
+                        // Stagger FAQ items subtly
+                        delay = index * 100;
+                    } else if (el.classList.contains('hero-headline')) {
+                        delay = 100;
+                    } else if (el.classList.contains('hero-subheadline')) {
+                        delay = 300;
+                    } else if (el.classList.contains('cta-wrapper')) {
+                        delay = 500;
+                    }
+
+                    setTimeout(() => {
+                        el.classList.add('in-view');
+                    }, delay);
+
+                    observer.unobserve(el);
+                }
+            });
+        }, observerOptions);
+
+        animatedElements.forEach(el => {
+            el.classList.add('cinematic-reveal');
+            observer.observe(el);
+        });
+    }
+
     function initPreloader() {
         const preloader = document.getElementById('preloader');
         if (!preloader) return;
@@ -109,9 +173,6 @@
                 document.documentElement.style.overflow = '';
 
                 // Trigger entrance animations for other elements if desired
-                // For example, fade in the nav similar to how it appears
-                const nav = document.querySelector('nav');
-                // The nav has its own logic, but we can animate the header/logo in
                 const header = document.querySelector('header');
                 if (header) {
                     header.style.opacity = '0';
@@ -121,17 +182,12 @@
                     });
                 }
 
-                // Also animate the hero content
-                const hero = document.querySelector('.hero-container');
-                if (hero) {
-                    hero.style.opacity = '0';
-                    hero.style.transform = 'translateY(20px)';
-                    hero.style.transition = 'opacity 1s ease 0.3s, transform 1s ease 0.3s';
-                    requestAnimationFrame(() => {
-                        hero.style.opacity = '1';
-                        hero.style.transform = 'translateY(0)';
-                    });
-                }
+                // Also animate the hero content - REMOVED to let initScrollAnimations handle it
+                // const hero = document.querySelector('.hero-container');
+                // if (hero) { ... }
+
+                // Initialize scroll animations after preloader is done
+                initScrollAnimations();
 
             }, 500); // 500ms minimum duration for branding visibility
         };
